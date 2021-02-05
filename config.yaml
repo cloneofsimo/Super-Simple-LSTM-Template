@@ -1,0 +1,25 @@
+model:
+  lstm_emb: 32
+
+dataset:
+  dir: "../data"
+
+train:
+  optim: "adam"
+  accumulate: 1
+  batch_size: 16
+  betas: [0.5, 0.9]
+  weight_decay: 0.000001
+  lr: 0.0001
+
+  epochs: 1000
+  version: 0
+  gpus: 1
+  num_workers: 3
+
+  log_dir: "logs"
+  checkpoint_dir: "checkpoints"
+  save_top_k: 3
+  check_val_freq: 5
+
+  fast_dev_run: False
